@@ -1,8 +1,13 @@
 <template>
+<div>
   <div v-if="loaded">
     <img :src="user.picture.large" alt="" />
     <h2>{{ user.name.first }}</h2>
   </div>
+  <div v-else>
+    <b-spinner type="grow" label="Spinning"></b-spinner>
+  </div>
+</div>
 </template>
 
 <script>
